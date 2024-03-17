@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'purple-primary': '#8c52fe',
+        'green-primary': '#43a724',
+        'text-primary': '#717275',
+      },
+      fontFamily: {
+        'league': "League Spartan, sans-serif",
+        
+      },
+    },
   },
   plugins: [],
 }
