@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4 bg-white">
-      <div className="flex  container m-auto max-w-7xl justify-between lg:justify-normal px-4  lg:px-0">
+      <div className="flex relative container m-auto max-w-7xl justify-between lg:justify-normal px-4  lg:px-5">
         {/* Hamburger Menu Button */}
         <button
           className="text-gray-500 w-20 h-20 p-10 relative focus:outline-none bg-white lg:hidden order-3"
@@ -50,7 +50,7 @@ const Navbar = () => {
         </a>
 
         {/* Menu Links */}
-        <div className={`lg:flex lg:flex-grow lg:justify-center lg:items-center order-2 absolute top-28 left-0 w-full lg:w-auto lg:static bg-white lg:bg-inherit  lg:pt-0 lg:pb-0 pt-5 pb-10   ${isOpen ? 'block' : 'hidden'}`}>
+        <div className={`lg:flex lg:flex-grow lg:justify-center lg:items-center order-2 absolute top-20 left-0 w-full lg:w-auto lg:static bg-white lg:bg-inherit  lg:pt-0 lg:pb-0 pt-5 pb-10   ${isOpen ? 'block' : 'hidden'}`}>
           <ul className="flex items-center gap-4 xl:gap-10 text-xl font-thin flex-col lg:flex-row ">
             <li><NavLink to="/" className={({isActive}) => `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Home</NavLink></li>
             <li><NavLink to="/about" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>About</NavLink></li>
@@ -58,6 +58,7 @@ const Navbar = () => {
             <li><NavLink to="/contact" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Contact</NavLink></li>
             <li><NavLink to="/lms" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>LMS<sup>New</sup></NavLink></li>
             <li><NavLink to="/portal" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer flex-grow`}>Job Portal<sup>Coming Soon</sup></NavLink></li>
+            <li className='flex lg:hidden mt-5'><button className="py-2 text-white px-6 text-xl font-thin bg-purple-primary rounded-full ">Internee Portal</button></li>
           </ul>
         </div>
 
