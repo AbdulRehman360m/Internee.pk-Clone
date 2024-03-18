@@ -1,33 +1,74 @@
-import { NavLink } from "react-router-dom"
+// Desc: Navbar component for the website
+
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="py-4 bg-white">
-        <div className="flex container m-auto max-w-auto">
-            <a className="navbar flex flex-1 items-center justify-center" href="index.html">
-                <img className="w-20 mr-0" src="../../public/1st-logo.jpg"></img>
-                <div className="flex flex-col">
-                    <strong className="logo-text text-green-primary text-4xl">Internee<span className='text-black'>.pk</span></strong>
-                    <small className="logo-slogan font-bold text-xs leading-3  text-purple-primary">VIRTUAL INTERNSHIP PLATFORM</small>
-                </div>
-            </a>
-            <div className="flex-2 flex items-center">
-                <ul className="flex items-center  gap-10 text-xl font-thin">
-                    <li><NavLink to="" className={({isActive}) => `${isActive ? 'text-purple-primary' : 'text-text-primary'}hover:text-purple-primary cursor-pointer`}>Home</NavLink></li>
-                    <li><NavLink to="about"  className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>About</NavLink></li>
-                    <li><NavLink to="internships"  className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Internships</NavLink></li>
-                    <li><NavLink to="contact"  className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Contact</NavLink></li>
-                    <li><NavLink to="lms"  className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>LMS<sup>New</sup></NavLink></li>
-                    <li><NavLink to="portal"  className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Job Portal<sup>Coming Soon</sup></NavLink></li>
-                </ul>
-            </div>
-            <div className="flex-1 items-center justify-center flex">
-                <button className="py-2 text-white px-6 text-xl font-thin bg-purple-primary rounded-full ">Internee Portal</button>
-            </div>
-        </div>
-      
-    </div>
-  )
-}
+      <div className="flex  container m-auto max-w-7xl justify-between lg:justify-normal px-4  lg:px-0">
+        {/* Hamburger Menu Button */}
+        <button
+          className="text-gray-500 w-20 h-20 p-10 relative focus:outline-none bg-white lg:hidden order-3"
+          onClick={toggleMenu}
+        >
+          <span className="sr-only">Open main menu</span>
+          <div className="block w-10 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <span
+              aria-hidden="true"
+              className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                isOpen ? 'rotate-45' : '-translate-y-1.5'
+              }`}
+            ></span>
+            <span
+              aria-hidden="true"
+              className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                isOpen ? 'opacity-0' : ''
+              }`}
+            ></span>
+            <span
+              aria-hidden="true"
+              className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                isOpen ? '-rotate-45' : 'translate-y-1.5'
+              }`}
+            ></span>
+          </div>
+        </button>
+         {/* Logo and Slogan */}
+        <a className="navbar flex order-1 items-center lg:justify-center" href="index.html">
+          <img className="sm:w-20 w-14 mr-0" src="../../public/1st-logo.jpg" alt="Logo"></img>
+          <div className="flex flex-col">
+            <strong className="logo-text text-green-primary text-2xl sm:text-4xl ">Internee<span className='text-black'>.pk</span></strong>
+            <small className="logo-slogan font-bold sm:text-xs text-[8px] leading-3 text-purple-primary">VIRTUAL INTERNSHIP PLATFORM</small>
+          </div>
+        </a>
 
-export default Navbar
+        {/* Menu Links */}
+        <div className={`lg:flex lg:flex-grow lg:justify-center lg:items-center order-2 absolute top-28 left-0 w-full lg:w-auto lg:static bg-white lg:bg-inherit  lg:pt-0 lg:pb-0 pt-5 pb-10   ${isOpen ? 'block' : 'hidden'}`}>
+          <ul className="flex items-center gap-4 xl:gap-10 text-xl font-thin flex-col lg:flex-row ">
+            <li><NavLink to="/" className={({isActive}) => `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Home</NavLink></li>
+            <li><NavLink to="/about" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>About</NavLink></li>
+            <li><NavLink to="/internships" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Internships</NavLink></li>
+            <li><NavLink to="/contact" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>Contact</NavLink></li>
+            <li><NavLink to="/lms" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer`}>LMS<sup>New</sup></NavLink></li>
+            <li><NavLink to="/portal" className={({isActive}) =>  `${isActive ? 'text-purple-primary' : 'text-text-primary'} hover:text-purple-primary cursor-pointer flex-grow`}>Job Portal<sup>Coming Soon</sup></NavLink></li>
+          </ul>
+        </div>
+
+        {/* Internee Portal Button */}
+        <div className="order-2 lg:order-3 lg:items-center lg:flex hidden ">
+          <button className="py-2 text-white px-6 text-xl font-thin bg-purple-primary rounded-full ">Internee Portal</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
+
