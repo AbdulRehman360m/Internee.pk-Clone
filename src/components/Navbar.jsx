@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4 bg-white">
-      <div className="flex relative container m-auto xl:max-w-6xl 2xl:max-w-7xl lg:max-w-5xl sm:max-w-xl md:max-w-2xl justify-between lg:justify-normal px-4 sm:px-0 ">
+      <div className="flex relative container m-auto xl:max-w-6xl 2xl:max-w-7xl lg:max-w-5xl max-w-full justify-between lg:justify-normal px-4 sm:px-0 ">
         {/* Hamburger Menu Button */}
         <button
           className="text-gray-500 w-20 h-20 p-10 relative focus:outline-none bg-white lg:hidden order-3"
