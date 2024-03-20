@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .responsive-container {
+      @apply m-auto xl:max-w-6xl 2xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl container;
+    }
+  }
