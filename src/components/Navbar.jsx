@@ -47,7 +47,7 @@ const Navbar = () => {
         >
           <img
             className="sm:w-20 w-14 mr-0"
-            src="../../public/1st-logo.jpg"
+            src="/1st-logo.jpg"
             alt="Logo"
           ></img>
           <div className="flex flex-col">

@@ -1,9 +1,9 @@
-import React from 'react'
 
 const Internships = () => {
   return (
     <div>
       Intern
+      {/* internships grid import here  */}
     </div>
   )
 }

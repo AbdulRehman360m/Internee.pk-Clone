@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div>
       {/* Footer Section 1  */}
-      <section className="w-full bg-[url(../../public/millennial-group-young-businesspeople.jpg)] bg-cover bg-no-repeat bg-top pt-36 pb-20 relative bg-gray-500 opacity-75 bg-blend-multiply ">
+      <section className="w-full bg-[url(/millennial-group-young-businesspeople.jpg)] bg-cover bg-no-repeat bg-top pt-36 pb-20 relative bg-gray-500 opacity-75 bg-blend-multiply ">
         <div className="bg-green-primary opacity-60 absolute top-0 left-0 min-w-full min-h-full bg-blend-multiply"></div>
         <div className="text-white responsive-container px-5 sm:px-auto relative grid grid-cols-2">
           <div className="xl:col-span-1 w-[88%] col-span-2">
@@ -28,6 +28,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
+
       {/* Footer Section 2 */}
       <section className="bg-white w-full py-20">
         <div className="responsive-container px-5 sm:px-auto flex flex-wrap gap-10 xl:gap-20     text-lg md:text-xl leading-10 font-thin">
@@ -40,7 +41,7 @@ const Footer = () => {
                 >
                   <img
                     className="sm:w-16 w-14 mr-0"
-                    src="../../public/1st-logo.jpg"
+                    src="/1st-logo.jpg"
                     alt="Logo"
                   ></img>
                   <div className="flex flex-col">
@@ -161,6 +162,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
+
       {/* Footer Section 3 (Main)*/}
       <section className="w-full py-5 bg-green-primary relative">
         <div className="responsive-container px-5 sm:px-auto">
