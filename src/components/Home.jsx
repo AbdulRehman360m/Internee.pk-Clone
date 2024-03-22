@@ -72,7 +72,7 @@ const Home = () => {
       </section>
 
       {/* Home Section 3 : Categories */}
-      <section className="Categories-section my-20">
+      <section className="Categories-section my-32">
         <div className="responsive-container">
           <h1 className="text-black text-4xl font-bold mb-10  text-center">Browse By Categories</h1>
 
@@ -135,10 +135,29 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
 
       {/*Home Section 4 : Google Cloud */}
-      <section></section>
+      <section className="my-20">
+        <div className="responsive-container px-4">
+          <div className="flex lg:gap-5 xl:gap-10 flex-col lg:flex-row justify-center m-auto">
+            <div className="rounded-t-3xl lg:rounded-tr-none lg:rounded-l-3xl left bg-green-primary px-5 lg:px-16  pt-10 lg:pt-20 pb-14 lg:pb-32">
+              <h1 className="text-white  font-semibold text-2xl sm:text-5xl mb-5 ">Launching tech careers with internships, exposure, and networking.</h1>
+              <p className="text-white text-lg sm:text-xl font-thin mb-10">Internee.pk kickstart student&apos;s tech careers with first internships, providing industry exposure, practical skills, and networking opportunities, paving the way for their success in the tech industry.</p>
+              <div className="flex gap-5">
+                <div className="first">
+                  <h1 className="text-white  text-2xl lg:text-6xl font-medium">5000+</h1>
+                  <p className="text-white text-sm lg:text-lg font-thin">Registered users</p>
+                </div>
+                <div className="second">
+                  <h1 className="text-white  text-2xl lg:text-6xl font-medium">35+</h1>
+                  <p className="text-white text-sm lg:text-lg font-thin">Opening Internships</p>
+                </div>
+              </div>
+            </div>
+            <div className="right rounded-b-3xl lg:rounded-bl-none rounded-r-3xl bg-[url(/people-working-as-team-company.jpg)] bg-cover bg-no-repeat bg-center  w-full lg:w-lvw h-[50vh] sm:h-[75vh] lg:h-auto"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Home Section 5 : Internships  */}
       {/*Internship Component here*/}
