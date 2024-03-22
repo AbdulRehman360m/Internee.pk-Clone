@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div>
       {/* Footer Section 1  */}
-      <section className="w-full bg-[url(/millennial-group-young-businesspeople.jpg)] bg-cover bg-no-repeat bg-top pt-36 pb-20 relative bg-gray-500 opacity-75 bg-blend-multiply ">
+      <section className="w-full bg-[url(/millennial-group-young-businesspeople.jpg)] bg-cover bg-no-repeat bg-top pt-36 pb-20 relative bg-gray-700 opacity-1 bg-blend-overlay ">
         <div className="bg-green-primary opacity-60 absolute top-0 left-0 min-w-full min-h-full bg-blend-multiply"></div>
         <div className="text-white responsive-container px-5 sm:px-auto relative grid grid-cols-2">
           <div className="xl:col-span-1 w-[88%] col-span-2">
