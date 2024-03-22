@@ -72,9 +72,6 @@ const Home = () => {
       </section>
 
       {/* Home Section 3 : Categories */}
-      <section></section>
-
-      {/*Home Section 4 : Google Cloud */}
       <section className="Categories-section my-20">
         <div className="responsive-container">
           <h1 className="text-black text-4xl font-bold mb-10  text-center">Browse By Categories</h1>
@@ -138,6 +135,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+
+      {/*Home Section 4 : Google Cloud */}
+      <section></section>
 
       {/* Home Section 5 : Internships  */}
       {/*Internship Component here*/}
