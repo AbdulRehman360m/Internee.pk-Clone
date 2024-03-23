@@ -10,9 +10,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="py-4 bg-white">
+    <div className="py-4 bg-white sticky top-0 z-10 w-full">
       <div className="flex relative container m-auto xl:max-w-6xl 2xl:max-w-7xl lg:max-w-5xl max-w-full justify-between lg:justify-normal px-4 sm:px-0 ">
+        
         {/* Hamburger Menu Button */}
         <button
           className="text-gray-500 w-20 h-20 p-10 relative focus:outline-none bg-white lg:hidden order-3"
@@ -40,6 +48,7 @@ const Navbar = () => {
             ></span>
           </div>
         </button>
+        
         {/* Logo and Slogan */}
         <a
           className="navbar flex order-1 items-center lg:justify-center"
@@ -70,6 +79,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
@@ -82,6 +92,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/about"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
@@ -94,6 +105,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/internships"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
@@ -106,6 +118,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/contact"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
@@ -118,6 +131,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/lms"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
@@ -130,6 +144,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/portal"
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-purple-primary" : "text-text-primary"
