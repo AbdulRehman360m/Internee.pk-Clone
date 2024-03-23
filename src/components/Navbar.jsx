@@ -52,7 +52,7 @@ const Navbar = () => {
         {/* Logo and Slogan */}
         <a
           className="navbar flex order-1 items-center lg:justify-center"
-          href="index.html"
+          href="/"
         >
           <img
             className="sm:w-20 w-14 mr-0"
